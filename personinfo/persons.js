@@ -36,7 +36,6 @@ personRouter.put('/updatePerson',(req,res)=>{
     console.log("id is *** ",req.body.uuId);
     personDetails.findById(req.body.uuId).then(personDetails => {console.log(personDetails);
       personDetails.set({
-        //uuId:req.body.uuId,
         fName:req.body.fName,
         mName:req.body.mName,
         lName:req.body.lName,

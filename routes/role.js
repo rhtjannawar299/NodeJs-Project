@@ -2,8 +2,6 @@ const express = require('express');
 
 const mongoose = require('mongoose');
 
-//const auth=require('../authentication/authentication.js');
-
 const role=express.Router();
 
 let {roleSchema,userrole} = require('../model/roleModel')
@@ -11,10 +9,6 @@ let {roleSchema,userrole} = require('../model/roleModel')
 role.get('/',(req,res)=>{
     res.send("hello you are in role page");
 });
-
-/*role.get('/:userId',auth,(req,res)=>{
- res.send("hello you are in role page");
-});*/
 
 role.post('/createRole',(req,res)=>{
     let roleName=req.body.roleName;
